@@ -1,0 +1,75 @@
+{
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "./src/**/*.ts",
+                "./src/**/*.tsx"
+            ],
+            "excludedFiles": "*.test.tsx"
+        }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "space-in-parens": [
+            "error",
+            "never"
+        ]
+    }
+}
+
+/*
+    package.json
+
+    scripts:
+
+        "eslint": "node_modules/.bin/eslint --fix ./src"
+
+    devDependencies:
+
+        "@typescript-eslint/eslint-plugin": "^5.57.0",
+        "@typescript-eslint/parser": "^5.57.0",
+        "eslint": "^8.37.0",
+        "eslint-plugin-react": "^7.32.2",
+*/
